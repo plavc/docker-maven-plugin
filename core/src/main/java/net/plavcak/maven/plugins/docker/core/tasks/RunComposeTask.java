@@ -2,12 +2,12 @@ package net.plavcak.maven.plugins.docker.core.tasks;
 
 import net.plavcak.maven.plugins.docker.core.Command;
 import net.plavcak.maven.plugins.docker.core.CommandExecutor;
-import net.plavcak.maven.plugins.docker.core.TaskResult;
 import net.plavcak.maven.plugins.docker.core.DockerCommand;
+import net.plavcak.maven.plugins.docker.core.TaskResult;
 
-public class ImageSaveTask extends CommandTask<ImageSaveInput> {
+public class RunComposeTask extends CommandTask<ImageSaveInput> {
 
-    public ImageSaveTask(CommandExecutor commandExecutor) {
+    public RunComposeTask(CommandExecutor commandExecutor) {
         super(commandExecutor);
     }
 

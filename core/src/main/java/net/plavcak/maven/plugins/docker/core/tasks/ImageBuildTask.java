@@ -4,12 +4,10 @@ import net.plavcak.maven.plugins.docker.core.CommandExecutor;
 import net.plavcak.maven.plugins.docker.core.TaskResult;
 import net.plavcak.maven.plugins.docker.core.DockerCommand;
 
-public class ImageBuildTask implements Task<ImageBuildInput> {
-
-    private CommandExecutor commandExecutor;
+public class ImageBuildTask extends CommandTask<ImageBuildInput> {
 
     public ImageBuildTask(CommandExecutor commandExecutor) {
-        this.commandExecutor = commandExecutor;
+        super(commandExecutor);
     }
 
     @Override

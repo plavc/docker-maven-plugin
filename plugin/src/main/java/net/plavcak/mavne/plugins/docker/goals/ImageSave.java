@@ -3,21 +3,18 @@ package net.plavcak.mavne.plugins.docker.goals;
 import net.plavcak.maven.plugins.docker.core.CommandExecutor;
 import net.plavcak.maven.plugins.docker.core.tasks.ImageSaveTask;
 import net.plavcak.mavne.plugins.docker.parameters.ImageSaveParameter;
-import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 
 @Mojo( name = "save")
-public class ImageSave extends AbstractMojo {
-
-    private ImageSaveTask task;
+public class ImageSave extends AbstractCommandGoal<ImageSaveTask> {
 
     @Parameter
     private ImageSaveParameter save;
 
     public ImageSave() {
-        task = new ImageSaveTask(new CommandExecutor());
+        super(new ImageSaveTask(new CommandExecutor()));
     }
 
     public void execute() throws MojoExecutionException {

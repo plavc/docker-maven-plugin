@@ -7,13 +7,13 @@ import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 
-@Mojo( name = "container-run")
-public class ContainerRun extends AbstractCommandGoal<RunContainerTask> {
+@Mojo( name = "container-stop")
+public class ContainerStop extends AbstractCommandGoal<RunContainerTask> {
 
     @Parameter
     private RunContainerInput container;
 
-    public ContainerRun() {
+    public ContainerStop() {
         super(new RunContainerTask(new CommandExecutor()));
     }
 
