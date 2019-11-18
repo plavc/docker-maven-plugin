@@ -11,7 +11,7 @@ public class RunServiceTask extends CommandTask<RunServiceInput> {
     }
 
     @Override
-    public TaskResult run(RunServiceInput input) throws InvalidInputException {
+    public TaskResult run(RunServiceInput input) throws Exception {
         return commandExecutor.execute(Command.create());
     }
 }

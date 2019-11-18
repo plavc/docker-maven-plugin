@@ -11,7 +11,7 @@ public class RunStackTask extends CommandTask<RunStackInput> {
     }
 
     @Override
-    public TaskResult run(RunStackInput input) throws InvalidInputException {
+    public TaskResult run(RunStackInput input) throws Exception {
         return commandExecutor.execute(Command.create());
     }
 }

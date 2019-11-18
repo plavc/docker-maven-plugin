@@ -6,7 +6,7 @@
 
     <groupId>net.plavcak</groupId>
     <artifactId>docker-maven-plugin</artifactId>
-    <version>1.0.7-SNAPSHOT</version>
+    <version>0.0.10-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
     <name>Docker Maven Plugin</name>
 

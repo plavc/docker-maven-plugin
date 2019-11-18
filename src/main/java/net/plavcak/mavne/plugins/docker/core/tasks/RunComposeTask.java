@@ -12,7 +12,7 @@ public class RunComposeTask extends CommandTask<RunComposeInput> {
     }
 
     @Override
-    public TaskResult run(RunComposeInput input) throws InvalidInputException {
+    public TaskResult run(RunComposeInput input) throws Exception {
         Command command = DockerCommand.create("docker-compose").add("up")
                 .addConditional("-d", input.isDetached())
                 .addConditional("--no-color ", input.isNoColor())

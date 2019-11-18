@@ -18,6 +18,10 @@ public class ImageBuild extends AbstractCommandGoal<ImageBuildTask> {
     }
 
     public void execute() throws MojoExecutionException {
-        task.run(build.getImage());
+        try {
+            task.run(build.getImage());
+        } catch (Exception e) {
+            throw new MojoExecutionException("Docker image build failed.", e);
+        }
     }
 }

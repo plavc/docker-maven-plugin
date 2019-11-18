@@ -7,7 +7,7 @@ import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 
-@Mojo( name = "container-run")
+//@Mojo( name = "container-run")
 public class ContainerRun extends AbstractCommandGoal<RunContainerTask> {
 
     @Parameter
@@ -18,6 +18,6 @@ public class ContainerRun extends AbstractCommandGoal<RunContainerTask> {
     }
 
     public void execute() throws MojoExecutionException {
-        System.out.println("Docker container run.");
+        getLog().info("Docker container run.");
     }
 }

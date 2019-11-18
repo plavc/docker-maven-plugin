@@ -21,7 +21,13 @@ public class ImageSave extends AbstractCommandGoal<ImageSaveTask> {
         if(save != null && save.getImage() != null
                 && save.getImage().getFile() != null
                 && save.getImage().getTag() != null) {
-            task.run(save.getImage());
+
+            try {
+                task.run(save.getImage());
+            } catch (Exception e) {
+                throw new MojoExecutionException("Docker image save failed.", e);
+            }
+
         } else {
             getLog().error("Invalid parameters.");
         }

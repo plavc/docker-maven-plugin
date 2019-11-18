@@ -11,7 +11,7 @@ public class RunContainerTask extends CommandTask<RunContainerInput> {
     }
 
     @Override
-    public TaskResult run(RunContainerInput input) throws InvalidInputException {
+    public TaskResult run(RunContainerInput input) throws Exception {
         return commandExecutor.execute(Command.create());
     }
 }

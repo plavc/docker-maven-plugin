@@ -11,7 +11,7 @@ public class ImageBuildTask extends CommandTask<ImageBuildInput> {
     }
 
     @Override
-    public TaskResult run(ImageBuildInput input) throws InvalidInputException {
+    public TaskResult run(ImageBuildInput input) throws Exception {
         DockerCommand command = DockerCommand.create("build");
         input.getBuildArgs().forEach((k, v) -> command.add("--build-arg").add(k + "=" + v));
         command.addConditionalWithValue("-t", input.getTag(), true)

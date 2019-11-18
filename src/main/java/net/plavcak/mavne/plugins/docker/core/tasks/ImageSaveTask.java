@@ -12,7 +12,7 @@ public class ImageSaveTask extends CommandTask<ImageSaveInput> {
     }
 
     @Override
-    public TaskResult run(ImageSaveInput input) throws InvalidInputException {
+    public TaskResult run(ImageSaveInput input) throws Exception {
         Command command = DockerCommand.create("save")
                 .add("-o")
                 .add(input.getFileWithFallback().getAbsolutePath())

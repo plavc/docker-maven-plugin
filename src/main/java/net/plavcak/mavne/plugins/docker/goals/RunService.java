@@ -4,7 +4,7 @@ import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
 
-@Mojo( name = "service-run")
+//@Mojo( name = "service-run")
 public class RunService extends AbstractMojo {
 
     public RunService() {

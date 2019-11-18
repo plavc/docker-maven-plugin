@@ -5,7 +5,7 @@ import net.plavcak.mavne.plugins.docker.core.tasks.ImageBuildTask;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
 
-@Mojo( name = "run-compose")
+//@Mojo( name = "run-compose")
 public class RunCompose extends AbstractRunGoal<ImageBuildTask> {
 
     public RunCompose() {
